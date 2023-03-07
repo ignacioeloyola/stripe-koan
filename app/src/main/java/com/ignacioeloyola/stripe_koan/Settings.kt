@@ -55,7 +55,7 @@ class Settings(context: Context) {
         /**
          * Set to publishable key from https://dashboard.stripe.com/test/apikeys
          */
-        private const val PUBLISHABLE_KEY = "pk_test_51LpWx4LIl8UswShOFHal4NHQR22inYDzq3VPhEMXEa3ic0a1S99Ivo0WRhhRFxhAthMr7kNYKfwBQgi9EmilqACc00nl4eFtr8"
+        private const val PUBLISHABLE_KEY = "input here your pk, but take into account that you have to use this"
 
         /**
          * Optionally, set to a Connect Account id to use for API requests to test Connect

@@ -61,11 +61,8 @@ class PaymentActivity : AppCompatActivity() {
         PaymentSession(
             this,
             PaymentSessionConfig.Builder()
-                .setPrepopulatedShippingInfo(DEFAULT_SHIPPING_INFO)
-                .setShippingInformationValidator(ShippingInfoValidator())
-                .setShippingMethodsFactory(ShippingMethodsFactory())
-                .setBillingAddressFields(BillingAddressFields.PostalCode)
-                .setShouldShowGooglePay(args.isGooglePayReady)
+                // TODO FOR THE KOAN THIS SHOULD SHOW US THE OPTION TO PAY WITH GOOGLE PAY
+                        // AND ALREADY POPULATE THE ADDRESS WITH DEFAULT_SHIPPING_INFO
                 .build()
         )
     }
@@ -121,15 +118,15 @@ class PaymentActivity : AppCompatActivity() {
         updateConfirmPaymentButton(totalPrice)
 
         viewBinding.buttonAddShippingInfo.setOnClickListener {
-            paymentSession.presentShippingFlow()
+//            paymentSession.presentShippingFlow()  // TODO ENABLE WHEN IT IS CORRECTLY CONFIGURED
         }
         viewBinding.buttonAddPaymentMethod.setOnClickListener {
-            paymentSession.presentPaymentMethodSelection()
+//            paymentSession.presentPaymentMethodSelection()    // TODO ENABLE WHEN IT IS CORRECTLY CONFIGURED
         }
 
         viewBinding.buttonConfirmPayment.setOnClickListener {
             paymentSessionData?.let {
-                createPaymentIntent(it)
+                createPaymentIntent(it) // TODO TAKE A LOOK TO LEARN ABOUT PAYMENT INTENTS
             }
         }
         viewBinding.buttonConfirmSetup.setOnClickListener {
