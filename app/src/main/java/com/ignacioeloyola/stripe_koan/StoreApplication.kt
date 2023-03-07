@@ -36,8 +36,8 @@ class StoreApplication : Application() {
         CoroutineScope(Dispatchers.IO).launch {
             PaymentConfiguration.init(
                 this@StoreApplication,
-                publishableKey = settings.publishableKey,
-                stripeAccountId = settings.stripeAccountId
+                publishableKey = "Here you have to do something, with something that starts with pk_, I think ^^",  // TODO FIX
+                stripeAccountId = settings.stripeAccountId // THIS PART IS NOT IMPORTANT FOR THE KOAN
             )
         }
 
